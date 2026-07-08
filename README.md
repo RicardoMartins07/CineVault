@@ -160,6 +160,24 @@ As a result, the API key is included in the client-side code. This is a common l
 For a production-ready application, these requests should be handled by a backend or serverless functions (such as Vercel Functions, Express, or Node.js) to keep API credentials secure.
 
 ---
+## Architecture
+
+The following diagrams provide an overview of CineVault's architecture and application flow.
+
+| Diagram | Description |
+|----------|-------------|
+| **Application Flow** | High-level workflow of the application, including initialization, navigation, TMDB requests and LocalStorage persistence. |
+| **Module Architecture** | High-level communication between the application's modules, controllers, views, model and external services. |
+
+### Application Flow
+
+![Application Flow](assets/Architecture/Application-Flow.jpg)
+
+### Module Architecture
+
+![Module Architecture](assets/Architecture/Module_Architecture.jpg)
+
+---
 
 ## License
 
