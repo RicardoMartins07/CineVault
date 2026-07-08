@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="View movie details, watch trailers, rate films and save personal notes with CineVault."
+    />
+    <title>CineVault — Details</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favIcon.png" />
+
+    <script
+      defer
+      type="module"
+      src="./js/controllers/detailsController.js"
+    ></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="site-header">
+        <a class="brand" href="index.html" aria-label="CineVault home">
+          <img
+            src="assets/logo.png"
+            alt="CineVault"
+            class="brand__logo"
+            width="220"
+            height="52"
+          />
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="main-nav__link" href="index.html">Discover</a>
+          <a class="main-nav__link" href="favorites.html">Favorites</a>
+          <a class="main-nav__link" href="watchlist.html">Watchlist</a>
+        </nav>
+
+        <button class="icon-btn" type="button" aria-label="Toggle theme">
+          <i data-lucide="moon-star"></i>
+        </button>
+      </header>
+
+      <main>
+        <a class="back-link" href="index.html">← Back to results</a>
+
+        <section class="details-layout">
+          <!--<aside class="details-poster">
+            <img
+              src="https://placehold.co/540x800/181a2a/ffffff?text=Poster"
+              alt="Selected title poster"
+            />
+          </aside>
+
+          <article class="details-panel">
+            <span class="pill">Movie</span>
+            <h1>Example Movie</h1>
+
+            <div class="details-meta">
+              <span>2024</span>
+              <span>142 min</span>
+              <span>Sci-Fi</span>
+              <span>★ 8.4 IMDb</span>
+            </div>
+
+            <p class="overview">
+              
+            </p>
+
+            <div class="action-row">
+              <button class="primary-action" type="button">
+                Add to favorites
+              </button>
+              <button class="secondary-action" type="button">
+                Add to watchlist
+              </button>
+              <button class="secondary-action" type="button">
+                Mark as watched
+              </button>
+            </div>
+
+            <section class="info-grid" aria-label="Title information">
+              <div>
+                <span>Director</span>
+                <strong>Director Name</strong>
+              </div>
+              <div>
+                <span>Cast</span>
+                <strong>Actor One, Actor Two, Actor Three</strong>
+              </div>
+              <div>
+                <span>Country</span>
+                <strong>United States</strong>
+              </div>
+              <div>
+                <span>Language</span>
+                <strong>English</strong>
+              </div>
+            </section>
+
+            <section class="notes-card">
+              <div class="notes-card__header">
+                <div>
+                  <span class="section-label">Personal rating</span>
+                  <h2>Your notes</h2>
+                </div>
+                <div class="star-rating" aria-label="Rate this title">
+                  <button type="button" data-rating="1">★</button>
+                  <button type="button" data-rating="2">★</button>
+                  <button type="button" data-rating="3">★</button>
+                  <button type="button" data-rating="4">★</button>
+                  <button type="button" data-rating="5">★</button>
+                </div>
+              </div>
+
+              <div class="saved-note --hidden">
+                <span>Saved note</span>
+                <p class="saved-note__text"></p>
+              </div>
+              <textarea
+                placeholder="Write a private note about this title..."
+              ></textarea>
+              <button class="primary-action" type="button">Save note</button>
+            </section>
+          </article> -->
+        </section>
+        <div class="toast-container"></div>
+      </main>
+      <footer class="site-footer">
+        <p>© 2026 CineVault</p>
+
+        <a
+          class="tmdb-credit"
+          href="https://www.themoviedb.org/"
+          target="_blank"
+          rel="noopener"
+        >
+          <span>Powered by</span>
+
+          <img
+            src="assets/tmdb.svg"
+            alt="The Movie Database"
+            class="tmdb-logo"
+            width="220"
+            height="52"
+          />
+        </a>
+      </footer>
+    </div>
+  </body>
+</html>

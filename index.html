@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover movies, build your watchlist, save favorites and rate your favourite films with CineVault."
+    />
+    <title>CineVault — Discover</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favIcon.png" />
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+    <script defer type="module" src="js/app.js"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="site-header">
+        <a class="brand" href="index.html" aria-label="CineVault home">
+          <img
+            src="assets/logo.png"
+            alt="CineVault"
+            class="brand__logo"
+            width="220"
+            height="52"
+          />
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="main-nav__link main-nav__link--active" href="index.html"
+            >Discover</a
+          >
+          <a class="main-nav__link" href="favorites.html">Favorites</a>
+          <a class="main-nav__link" href="watchlist.html">Watchlist</a>
+        </nav>
+
+        <button class="icon-btn" type="button" aria-label="Toggle theme">
+          <i data-lucide="moon-star"></i>
+        </button>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero__content">
+            <span class="kicker">Movie Tracker</span>
+            <h1>Find your next obsession.</h1>
+            <p>
+              Search movies, save favorites, build your watchlist and keep track
+              of what you've watched.
+            </p>
+
+            <form class="search-panel" aria-label="Search movies">
+              <label class="search-panel__field">
+                <span>Search title</span>
+                <input
+                  type="search"
+                  placeholder="Try “Interstellar”, “Breaking Bad”, “The Bear”..."
+                  class="search-panel__input"
+                />
+              </label>
+
+              <button class="search-panel__button" type="submit" disabled>
+                Search
+              </button>
+            </form>
+
+            <div class="suggestions" aria-label="Popular searches">
+              <span>Popular:</span>
+              <button type="button">Dune</button>
+              <button type="button">Severance</button>
+              <button type="button">Oppenheimer</button>
+            </div>
+          </div>
+
+          <aside class="hero-card" aria-label="Featured title preview">
+            <!--<div class="hero-card__poster">
+              <img
+                src="https://placehold.co/480x680/181a2a/ffffff?text=Featured"
+                alt="Featured movie poster"
+              />
+              <span class="hero-card__score">IMDb 8.8</span>
+            </div>
+            <div class="hero-card__body">
+              <span class="pill">Featured</span>
+              <h2>Featured Title</h2>
+              <p>
+                A rich preview area you can replace with trending content from
+                your API.
+              </p>
+            </div>-->
+          </aside>
+        </section>
+
+        <section class="content-header">
+          <div>
+            <span class="section-label">Explore</span>
+            <h2 class="search-results">Search results</h2>
+          </div>
+
+          <div class="controls">
+            <button class="clear-results-btn --hidden" type="button">
+              <i data-lucide="trash-2"></i>
+              <span>Clear results</span>
+            </button>
+
+            <select class="select" aria-label="Sort results">
+              <option value="relevance">Sort by relevance</option>
+              <option value="newest">Newest first</option>
+              <option value="oldest">Oldest first</option>
+              <option value="title-asc">Title A-Z</option>
+              <option value="title-desc">Title Z-A</option>
+              <option value="rating">IMDb Rating</option>
+            </select>
+          </div>
+        </section>
+
+        <section class="status-card status-card--hidden">
+          <div class="loader" aria-hidden="true"></div>
+          <h2>Searching the vault...</h2>
+          <p>Fetching movies from the API.</p>
+        </section>
+
+        <section class="movie-grid" aria-label="Movie results">
+          <!--<article class="movie-card">
+            <a class="movie-card__media" href="details.html">
+              <img
+                src="https://placehold.co/420x620/191b2d/ffffff?text=Poster"
+                alt="Movie poster"
+              />
+              <span class="movie-card__badge">Movie</span>
+            </a>
+            <div class="movie-card__body">
+              <div>
+                <h3>Example Movie</h3>
+                <p>2024 • Sci-Fi</p>
+              </div>
+              <span class="rating">★ 8.4</span>
+            </div>
+            <div class="movie-card__actions">
+              <button type="button" aria-label="Add to favorites">♡</button>
+              <button type="button" aria-label="Add to watchlist">＋</button>
+              <button type="button" aria-label="Mark as watched">✓</button>
+            </div>
+          </article>-->
+        </section>
+
+        <section class="empty-results --hidden" aria-live="polite">
+          <div class="empty-results__icon">
+            <i data-lucide="search-x"></i>
+          </div>
+
+          <h2>No results found</h2>
+          <p>
+            We couldn’t find anything matching your search. Try another title,
+            check the spelling, or search for something more popular.
+          </p>
+
+          <button class="empty-results__button" type="button">
+            Back to popular movies
+          </button>
+        </section>
+
+        <nav class="pagination --hidden" aria-label="Results pagination">
+          <button class="btn-prev">
+            <i data-lucide="chevron-left"></i>
+            <span>Previous</span>
+          </button>
+
+          <span class="n--pages"></span>
+
+          <button class="btn-next">
+            <span>Next</span>
+            <i data-lucide="chevron-right"></i>
+          </button>
+        </nav>
+      </main>
+      <footer class="site-footer">
+        <p>© 2026 CineVault</p>
+
+        <a
+          class="tmdb-credit"
+          href="https://www.themoviedb.org/"
+          target="_blank"
+          rel="noopener"
+        >
+          <span>Powered by</span>
+
+          <img
+            src="assets/tmdb.svg"
+            alt="The Movie Database"
+            class="tmdb-logo"
+            width="220"
+            height="52"
+          />
+        </a>
+      </footer>
+    </div>
+    <div class="toast-container"></div>
+  </body>
+</html>

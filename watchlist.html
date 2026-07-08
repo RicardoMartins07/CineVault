@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Manage your watchlist and keep track of watched movies with CineVault."
+    />
+    <title>CineVault — Watchlist</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favIcon.png" />
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+    <script
+      defer
+      type="module"
+      src="./js/controllers/watchlistController.js"
+    ></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="site-header">
+        <a class="brand" href="index.html" aria-label="CineVault home">
+          <img
+            src="assets/logo.png"
+            alt="CineVault"
+            class="brand__logo"
+            width="220"
+            height="52"
+          />
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="main-nav__link" href="index.html">Discover</a>
+          <a class="main-nav__link" href="favorites.html">Favorites</a>
+          <a class="main-nav__link main-nav__link--active" href="watchlist.html"
+            >Watchlist</a
+          >
+        </nav>
+
+        <button class="icon-btn" type="button" aria-label="Toggle theme">
+          <i data-lucide="moon-star"></i>
+        </button>
+      </header>
+
+      <main>
+        <section class="page-hero">
+          <span class="kicker">Plan your watching</span>
+          <h1>Watchlist</h1>
+          <p>
+            Keep track of what you want to watch next and what you have already
+            finished.
+          </p>
+        </section>
+
+        <section class="watchlist-board">
+          <div class="board-column">
+            <div class="board-column__header">
+              <h2>Want to watch</h2>
+              <span class="watchlist-count">0</span>
+            </div>
+
+            <div class="empty-mini empty-watchlist">
+              <p>No titles here yet.</p>
+            </div>
+
+            <section
+              class="movie-grid movie-grid--watchlist"
+              aria-label="Watchlist titles"
+            ></section>
+          </div>
+
+          <div class="board-column">
+            <div class="board-column__header">
+              <h2>Watched</h2>
+              <span class="watched-count">0</span>
+            </div>
+
+            <div class="empty-mini empty-watched">
+              <p>Finished titles will appear here.</p>
+            </div>
+
+            <section
+              class="movie-grid movie-grid--watched"
+              aria-label="Watched titles"
+            ></section>
+          </div>
+        </section>
+      </main>
+      <footer class="site-footer">
+        <p>© 2026 CineVault</p>
+
+        <a
+          class="tmdb-credit"
+          href="https://www.themoviedb.org/"
+          target="_blank"
+          rel="noopener"
+        >
+          <span>Powered by</span>
+
+          <img
+            src="assets/tmdb.svg"
+            alt="The Movie Database"
+            class="tmdb-logo"
+            width="220"
+            height="52"
+          />
+        </a>
+      </footer>
+    </div>
+  </body>
+</html>

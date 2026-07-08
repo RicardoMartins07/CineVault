@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Browse your favourite movies and track your personal collection with CineVault."
+    />
+    <title>CineVault — Favorites</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favIcon.png" />
+
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+    <script
+      defer
+      type="module"
+      src="./js/controllers/favoritesController.js"
+    ></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="site-header">
+        <a class="brand" href="index.html" aria-label="CineVault home">
+          <img
+            src="assets/logo.png"
+            alt="CineVault"
+            class="brand__logo"
+            width="220"
+            height="52"
+          />
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a class="main-nav__link" href="index.html">Discover</a>
+          <a class="main-nav__link main-nav__link--active" href="favorites.html"
+            >Favorites</a
+          >
+          <a class="main-nav__link" href="watchlist.html">Watchlist</a>
+        </nav>
+
+        <button class="icon-btn" type="button" aria-label="Toggle theme">
+          <i data-lucide="moon-star"></i>
+        </button>
+      </header>
+
+      <main>
+        <section class="page-hero">
+          <span class="kicker">Your collection</span>
+          <h1>Favorites</h1>
+          <p>The titles you loved enough to save.</p>
+        </section>
+
+        <section class="stats-grid" aria-label="Favorites stats">
+          <article class="stat-card">
+            <span>Movies</span>
+            <strong class="total-movies">0</strong>
+          </article>
+          <article class="stat-card">
+            <span>Average IMDb</span>
+            <strong class="avg-rate">0</strong>
+          </article>
+          <article class="stat-card">
+            <span>Personal ratings</span>
+            <strong class="total-ratings">0</strong>
+          </article>
+          <article class="stat-card">
+            <span>Average rating</span>
+            <strong class="avg-rating">0.0</strong>
+          </article>
+        </section>
+
+        <section class="empty-state">
+          <div class="empty-state__icon">♡</div>
+          <h2>No favorites yet</h2>
+          <p>
+            When you find something you love, save it here for quick access.
+          </p>
+          <a class="primary-link" href="index.html">Discover titles</a>
+        </section>
+
+        <section class="movie-grid" aria-label="Favorite titles"></section>
+      </main>
+      <footer class="site-footer">
+        <p>© 2026 CineVault</p>
+
+        <a
+          class="tmdb-credit"
+          href="https://www.themoviedb.org/"
+          target="_blank"
+          rel="noopener"
+        >
+          <span>Powered by</span>
+
+          <img
+            src="assets/tmdb.svg"
+            alt="The Movie Database"
+            class="tmdb-logo"
+            width="220"
+            height="52"
+          />
+        </a>
+      </footer>
+    </div>
+  </body>
+</html>
